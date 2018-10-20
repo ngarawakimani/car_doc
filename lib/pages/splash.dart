@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
+import 'maps.dart';
 
-class Splash extends StatelessWidget{
+class Splash extends StatefulWidget{
+
+  @override
+  SplashState createState() => new SplashState();
+}
+
+class SplashState extends State<Splash>{
+
+  @override
+  void initState() {
+    super.initState();
+    new Future.delayed(
+      const Duration(seconds: 5),
+        () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CarMap()
+        ),
+      )
+    );
+  }
 
   Widget build (BuildContext context){
     return Scaffold(
