@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'maps.dart';
+import 'register.dart';
 
 class Splash extends StatefulWidget{
 
@@ -16,7 +17,7 @@ class SplashState extends State<Splash>{
       const Duration(seconds: 5),
         () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CarMap()
+              MaterialPageRoute(builder: (context) => Register()
         ),
       )
     );
