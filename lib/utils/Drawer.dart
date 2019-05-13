@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import '../pages/history.dart';
+import '../pages/profile.dart';
+import '../pages/top_mechanics.dart';
 
 
 Widget carDrawer (BuildContext context){
 
   var drawItems = {
-
     'profile': {
       'name': 'My Profile',
       'path': './profile'
     },
-
     'help': {
       'name': 'Help',
       'path': './help'
     },
-
+    'history' : {
+      'name' : 'History',
+      'path' : '../pages/history.dart'
+    }
   };
 
   return Drawer(
@@ -54,7 +58,7 @@ Widget carDrawer (BuildContext context){
             // Update the state of the app
             // ...
             // Then close the drawer
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
           },
         ),
         ListTile(
@@ -64,17 +68,17 @@ Widget carDrawer (BuildContext context){
             // Update the state of the app
             // ...
             // Then close the drawer
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => History()));
           },
         ),
         ListTile(
           leading: Icon(Icons.account_balance_wallet,color: Colors.white,size: 30.0,),
-          title: Text('Wallet',style: TextStyle(fontSize: 15.0,color: Colors.white),),
+          title: Text('Top Car Docs',style: TextStyle(fontSize: 15.0,color: Colors.white),),
           onTap: () {
             // Update the state of the app
             // ...
             // Then close the drawer
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TopMechanics()));
           },
         ),
         ListTile(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import './maps.dart';
 
 class Register extends StatefulWidget{
@@ -62,7 +63,7 @@ class RegisterState extends State<Register>{
                                 decoration: new InputDecoration(
                                   contentPadding: EdgeInsets.all(10.0),
                                   hintText: "Full Name",
-                                  border: OutlineInputBorder(borderRadius : BorderRadius.all(Radius.circular(30.0)),borderSide: BorderSide(color: Colors.teal,width: 2.0))
+                                  border: OutlineInputBorder(borderRadius : BorderRadius.all(Radius.circular(30.0)),borderSide: BorderSide(color: Colors.teal[50],width: 2.0)),
                                 ),
                               ),
                             ),

@@ -18,6 +18,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="car_doc"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCGXHGBP60q8_CMOV0vpWp01X9dFvWc2XE"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
